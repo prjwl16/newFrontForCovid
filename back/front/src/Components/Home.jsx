@@ -7,7 +7,6 @@ import "./card.css"
 import { listPatients } from '../backend/apiCalls'
 import { Link } from 'react-router-dom'
 import AddPatient from './AddPatient'
-import "./style.css"
 const Home = () => {
 
     const [number, setNumber] = useState()
