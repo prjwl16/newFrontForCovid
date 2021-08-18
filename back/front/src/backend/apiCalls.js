@@ -1,5 +1,5 @@
 export const listPatients = async ()=>{
-    return fetch(`/listpatients`)
+    return fetch(`/api/listpatients`)
     .then(res=>res.json())
     .then(patients=> {
         return patients} )
@@ -8,7 +8,7 @@ export const listPatients = async ()=>{
     
 export const removePatient = async _id =>{
     console.log("Remove")
-    return fetch(`/removepatient`,{
+    return fetch(`/api/removepatient`,{
         method:"DELETE",
         headers:{
             "Content-Type":"application/json"
@@ -21,7 +21,7 @@ export const removePatient = async _id =>{
 }
 
 export const updatePatient=async (_id,status)=>{
-    return fetch(`/updatePatient`, {
+    return fetch(`/api/updatePatient`, {
         method: 'PUT',
         headers: {
             Accept:'application/json',
@@ -35,7 +35,7 @@ export const updatePatient=async (_id,status)=>{
 }
 
 export const addPatient=  async (patient)=>{
-    return fetch(`/addpatient`,{
+    return fetch(`/api/addpatient`,{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
