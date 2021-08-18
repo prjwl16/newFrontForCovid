@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react'
-import { API } from '../backend/api'
 import { removePatient,updatePatient } from '../backend/apiCalls'
 import "./card.css"
 const Card = ({data,setReload=f=>f,reload=undefined}) => {
